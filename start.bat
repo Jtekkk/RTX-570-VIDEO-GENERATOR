@@ -57,7 +57,7 @@ goto :torch_done
 echo  [....] PyTorch not found. Installing with CUDA 12.4 support.
 echo  [....] This is a large download (~2.5 GB). Please wait...
 echo  ------------------------------------------------
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 if errorlevel 1 (
     echo  [FAIL] PyTorch installation failed.
     pause
