@@ -81,6 +81,10 @@ python -c "import transformers" >nul 2>&1
 if errorlevel 1 goto :install_reqs
 python -c "import accelerate" >nul 2>&1
 if errorlevel 1 goto :install_reqs
+python -c "import tiktoken" >nul 2>&1
+if errorlevel 1 goto :install_reqs
+python -c "import google.protobuf" >nul 2>&1
+if errorlevel 1 goto :install_reqs
 echo  [OK]   All packages present, skipping install.
 goto :reqs_done
 

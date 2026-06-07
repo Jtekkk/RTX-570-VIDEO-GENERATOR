@@ -6,3 +6,5 @@ accelerate>=0.33.0
 gradio>=5.0.0
 imageio[ffmpeg]>=2.34.0
 sentencepiece>=0.1.99
+protobuf>=4.25.0
+tiktoken>=0.7.0
