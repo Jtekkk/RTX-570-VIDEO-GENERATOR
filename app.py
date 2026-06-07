@@ -92,7 +92,7 @@ def on_generate(
     return generate(prompt, negative_prompt, width, height, num_frames, steps, fps, seed, cpu_offload)
 
 
-with gr.Blocks(title="RTX 5070 Video Generator", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="RTX 5070 Video Generator") as demo:
     gr.Markdown(
         """
 # RTX 5070 Video Generator
@@ -168,4 +168,4 @@ if __name__ == "__main__":
         print(f"GPU detected: {torch.cuda.get_device_name(0)}")
         print(f"VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
 
-    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
+    demo.launch(server_name="0.0.0.0", server_port=7860, share=False, theme=gr.themes.Soft())
