@@ -54,9 +54,11 @@ echo  [OK]   PyTorch %TORCHVER% already installed, skipping.
 goto :torch_done
 
 :install_torch
-echo  [....] PyTorch not found. Installing with CUDA 12.4 support.
+echo  [....] PyTorch not found. Installing with CUDA 12.8 support (RTX 5070).
 echo  [....] This is a large download (~2.5 GB). Please wait...
 echo  ------------------------------------------------
+echo  [....] Pre-installing typing-extensions (fixes PyTorch index naming bug)...
+pip install "typing-extensions>=4.10.0" --quiet
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 if errorlevel 1 (
     echo  [FAIL] PyTorch installation failed.
