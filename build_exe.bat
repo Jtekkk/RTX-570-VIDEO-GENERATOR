@@ -35,12 +35,15 @@ pyinstaller ^
     --icon NONE ^
     --collect-all gradio ^
     --collect-all gradio_client ^
+    --collect-all safetensors ^
     --hidden-import diffusers ^
     --hidden-import transformers ^
     --hidden-import accelerate ^
     --hidden-import torch ^
     --hidden-import imageio ^
     --hidden-import imageio_ffmpeg ^
+    --hidden-import PIL ^
+    --hidden-import PIL._tkinter_finder ^
     app.py
 
 if errorlevel 1 (
